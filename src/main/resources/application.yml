@@ -1,0 +1,17 @@
+spring.mvc.pathmatch.matching-strategy:  ANT_PATH_MATCHER
+
+logging.level.org.springframework: ERROR
+logging.level.com.meli: INFO
+
+
+satellites:
+  list:
+    - name: "kenobi"
+      positionX: -500
+      positionY: -200
+    - name: "skywalker"
+      positionX: 100
+      positionY: -100
+    - name: "sato"
+      positionX: 500
+      positionY: 100

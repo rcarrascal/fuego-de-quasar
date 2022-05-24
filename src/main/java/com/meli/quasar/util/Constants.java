@@ -12,4 +12,5 @@ public interface Constants {
     String EXCEPTION_DATAINTEGRITYVIOLATIONEXCEPTION = "exception.message.dataIntegrityViolationException";
     String EXCEPTION_NULLPOINTEREXCEPTION = "exception.message.nullPointerException";
     String EXCEPTION_MESSAGESERROR = "exception.message.notdefined";
+    String EXCEPTION_POSITION = "exception.message.position";
 }
