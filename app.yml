@@ -1,0 +1,3 @@
+service: quasar-fire
+env: flex
+runtime: custom
