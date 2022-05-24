@@ -40,7 +40,6 @@ class MessageServiceImplTest {
         messageList.add(messageOne);
         messageList.add(messageTwo);
         messageList.add(messageThree);
-
-        System.out.println("El mensaje es " + messageService.getMessage(messageList));
+        assertEquals("este es un mensaje secreto", messageService.getMessage(messageList));
     }
 }
