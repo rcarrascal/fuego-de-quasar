@@ -13,4 +13,5 @@ public interface Constants {
     String EXCEPTION_NULLPOINTEREXCEPTION = "exception.message.nullPointerException";
     String EXCEPTION_MESSAGESERROR = "exception.message.notdefined";
     String EXCEPTION_POSITION = "exception.message.position";
+    String EXCEPTION_SATELLITE_EXIST = "exception.message.satellite.exist";
 }

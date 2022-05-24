@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Locale;
 
 @RestController
@@ -30,7 +32,7 @@ public class HelpSplitMessageController {
 
     @Operation(summary = "Recibir informacion de los satelites")
     @PostMapping("/{satelliteName}")
-    public Response topsecretSplit(@Parameter(description = "Nombre del satelite") @PathVariable("satelliteName")  String satelliteName,
+    public Response topsecretSplit(@Parameter(description = "Nombre del satelite") @PathVariable("satelliteName")  @NotNull @NotBlank String satelliteName,
                                    @RequestBody SatelliteRequest satelliteRequest) throws HelpMessageException {
         helpMessageFacade.saveMessage(satelliteRequest,satelliteName);
         return new Response(HttpStatus.CREATED.name(), "Satelite agregado con exito " +satelliteName );

@@ -38,6 +38,10 @@ public class HelpSplitMessageFacadeImpl implements HelpSplitMessageFacade {
 
     @Override
     public void saveMessage(SatelliteRequest satelliteRequest, String name) {
+        long count=messageRequestList.stream().filter(satellite->satellite.getName().equals(name)).count();
+        if(count>0){
+            throw new HelpMessageException(Constants.EXCEPTION_SATELLITE_EXIST);
+        }
         satelliteRequest.setName(name);
         messageRequestList.add(satelliteRequest);
     }
